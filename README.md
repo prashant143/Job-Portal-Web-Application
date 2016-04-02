@@ -1,2 +1,5 @@
 # Job-Portal-Web-Application
-This is my job portal web application that I developed with team member during internship.
+
+This is my job portal web application that I have developed with my team members.
+
+
