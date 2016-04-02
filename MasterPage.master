@@ -1,0 +1,117 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Job Portal</title>
+     <link href="css/style.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="css/coin-slider.css" />
+    <link rel="Shortcut Icon" href="images/job-icon.png" />
+<script type="text/javascript" src="js/cufon-yui.js"></script>
+<script type="text/javascript" src="js/cufon-aller.js"></script>
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/coin-slider.min.js"></script>
+   
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+<form runat="server" id="frm">
+     <div class="main">
+  <div class="header">
+    <div class="header_resize">
+      <div class="logo">
+        <h1 ><a href="home.aspx" style="color:Red; font-weight:bold;">Job <span>Portal</span> <small>Right Job For Right Person</small></a></h1>
+      </div>
+      <div class="menu_nav">
+        <ul>
+        <li>
+            <asp:LinkButton ID="lnkwelcome" runat="server" onclick="lnkwelcome_Click"></asp:LinkButton></li>
+          <li><a href="home.aspx"><span>Home</span></a></li>
+          <li><a href="about.aspx"><span>About us</span></a></li>
+         <!-- <li><a href="login.aspx"><span>LogIn</span></a></li>-->
+         <li>
+             <asp:LinkButton ID="LinkButton1" runat="server" onclick="LinkButton1_Click">LogIn</asp:LinkButton></li>
+          <li><a href="jobseeker_register.aspx"><span>Register</span></a></li>
+          <li><a href="contect.aspx"><span>Contact Us</span></a></li>
+        </ul>
+      </div>
+      <div class="clr"></div>
+      <div class="slider">
+        <div id="coin-slider">
+           <%-- <img src="images/slide2.jpg" width="960" height="250" alt="" />
+            <img src="images/h10.jpg" width="960" height="250" alt="" /> 
+            <img src="images/slide1.jpg" width="960" height="250" alt="" />
+           <img src="images/slide2.jpg" width="960" height="250" alt="" /> --%>
+             <%
+                  System.Data.DataSet ds = new System.Data.DataSet();
+                  Class1 obj = new Class1();
+                  ds = obj.conne("Select * from slider");
+                  int cnt;
+                  cnt = ds.Tables[0].Rows.Count;
+                  for (int i = 0; i < cnt; i++)
+                  {
+                      string img1 = ds.Tables[0].Rows[i][1].ToString();
+                      string im1 = img1.Substring(2);
+                      Response.Write("<a href='#'><img src=" + im1 + "   alt='' width='960' height='250'/></a>");
+                  }
+       %>
+       
+        </div>
+        
+       <div class="clr"></div>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="content_resize">
+      <div class="mainbar">
+        
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+      </div>
+      <div class="sidebar">
+        <div class="clr"></div>
+        <div class="gadget">
+          <h2 class="star"><span>Information</span></h2>
+          <div class="clr"></div>
+          <ul class="sb_menu">
+            <li><a href="home.aspx">Home</a></li>
+            <li><a href="about.aspx">About us</a></li>
+            <li><a href="contect.aspx">Contact us</a></li>
+            <li><a href="security.aspx">Security Advice</a></li>
+           
+           
+            <li><a href="feedback.aspx">FeedBack</a></li>
+        
+            <li><a href="help.aspx">Help</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="clr"></div>
+    </div>
+  </div>
+  <div class="fbg">
+    
+  </div>
+  <div class="footer">
+    <div class="footer_resize" style="text-align:center; color:Gray; font-size:13px;">
+      <br /><br />
+     <h3> <a href="home.aspx" style="color:Gray;">Home  </a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="about.aspx" style="color:Gray;">About Us  </a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="contect.aspx" style="color:Gray;">contact us  </a> &nbsp;&nbsp;|&nbsp;&nbsp;<a href="security.aspx" style="color:Gray;">security  </a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="help.aspx" style="color:Gray;">Help  </a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="feedback.aspx" style="color:Gray;">FeedBack  </a></h3>
+
+    <br />
+    <br />
+     </div>
+  </div>
+</div>
+
+    <div>
+    </div>
+      
+</form> 
+</body>
+</html>

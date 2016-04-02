@@ -1,0 +1,97 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="admin.master.cs" Inherits="admin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+     <link href="css/style.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="css/coin-slider.css" />
+<script type="text/javascript" src="js/cufon-yui.js"></script>
+<script type="text/javascript" src="js/cufon-aller.js"></script>
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/coin-slider.min.js"></script>
+   
+
+</head>
+<body>
+<form runat="server" id="form1">
+       <div class="main">
+  <div class="header">
+    <div class="header_resize">
+      <div class="logo">
+        <h1><a href="admin.aspx"> <span style="color:Gray;">Job Portal Administrative Tool</span> <small>Right Job For Right Person</small></a></h1>
+      </div>
+   
+      
+      <div class="menu_nav">
+        <ul>
+        
+          <li>
+              <asp:LinkButton ID="LinkButton2" runat="server" onclick="LinkButton2_Click1"></asp:LinkButton></li>
+          <li>
+              <asp:LinkButton ID="LinkButton1" runat="server" onclick="LinkButton1_Click1">Log Out</asp:LinkButton></li>
+          </ul>
+      </div>
+      <div class="clr"></div>
+      
+      <div class="clr"></div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="content_resize">
+      <div class="mainbar">
+        
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+      </div>
+      <div class="sidebar">
+        <div class="clr"></div>
+        <div class="gadget">
+       <a href="admin.aspx"><h2 class="star" style="font-size:x-large;"><span>My Account</span></h2></a>
+          <div class="clr"></div>
+          <ul class="sb_menu">
+          
+            <li><a href="adminview.aspx">View Report</a></li>
+            <li><a href="add_admin.aspx">Add Admin</a></li>
+            <li><a href="add_country.aspx">Add Country</a></li>
+            <li><a href="add_state.aspx">Add state</a></li>
+            <li><a href="add_city.aspx">Add City</a></li>
+            <li><a href="adminchange_pwd.aspx">Change Password</a></li>
+            <li><a href="send_mail.aspx">Send Mail</a></li>
+            <li><a href="adminslider.aspx">Upload Slider Image</a></li>
+            </ul>
+  
+
+          </div>
+      
+
+      </div>
+      <div class="clr"></div>
+    </div>
+  </div>
+  <div class="fbg">
+    
+  </div>
+  
+  <div class="footer">
+    <div class="footer_resize" style="text-align:center; color:Gray; font-size:13px;">
+      <br /><br />
+     <h4> <a href="admin.aspx" style="color:Gray;">My Account  </a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="jobseeker_report.aspx" style="color:Gray;">Jobseeker Report  </a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="company_report.aspx" style="color:Gray;">Company Report  </a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="Postjob_report.aspx" style="color:Gray;">PostJob Report  </a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="job_apply_report.aspx" style="color:Gray;">Apply Job Report  </a></h4>
+
+    <br />
+    <br />
+     </div>
+  </div>
+</div>
+
+    <div>
+    </div>
+   
+</form>
+</body>
+</html>

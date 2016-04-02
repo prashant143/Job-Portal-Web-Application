@@ -1,0 +1,77 @@
+﻿
+div{
+display: block;
+}
+ul, menu, dir {
+display: block;
+list-style-type: disc;
+-webkit-margin-before: 1em;
+-webkit-margin-after: 1em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+-webkit-padding-start: 40px;
+}
+div.latest_post_top {
+background: url(../images/latest_post_top.png) 0 0 no-repeat;
+padding: 5px 0 0 0;
+margin: 12px 0 0 0;
+}
+div.latest_post_bottom {
+background: url(../images/latest_post_bottom.png) 0 100% no-repeat;
+padding: 0 0 5px 0;
+}
+div.latest_post_job {
+border-left: solid 1px #BDBCBD;
+border-right: solid 1px #BDBCBD;
+
+padding: 0 120px 1px 0px;
+}
+div.latest_post_job ul li div.dated {
+border-right: solid 1px #CCCCCC;
+//padding: 0 10px 0 0;
+width: 30px;
+float: left;
+margin: 0 10px 0 0;
+}
+div.latest_post_job ul li div.dated span.date {
+font-size: 26px;
+color: #CCCCCC;
+font-weight: bold;
+}
+div.latest_post_job ul li div.dated span.month {
+font-size: 14px;
+font-weight: bold;
+color: #000000;
+display: block;
+}
+
+div.latest_post_job ul li div.job_detail h3 {
+margin: 0 0 5px 0;
+font-family: arial;
+font-size: 16px;
+font-weight: normal;
+}
+h3 {
+display: block;
+font-size: 1.17em;
+-webkit-margin-before: 1em;
+-webkit-margin-after: 1em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+font-weight: bold;
+}
+a {
+color: #588A00;
+text-decoration: none;
+}
+div.latest_post_job ul li div.job_detail span.job_info {
+display: block;
+}
+body, div, dl, dt, dd, ul, ol, li, pre, form, input, textarea, blockquote, th, td {
+font-family: Arial;
+}
+li {
+text-align: -webkit-match-parent;
+
+
+}
